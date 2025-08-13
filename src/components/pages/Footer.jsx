@@ -1,3 +1,15 @@
+
+const Company = ['about','premium','blog','affilate program','get copon'];
+const Order_Purchases = ['order Status','track your order','purchase history','returns & refunds','payment methods'];
+const Support_Services = ['contact support','FAQs','services centers','warranty information ','product manuals'];
+const Partnerships = ['partner with us','become a supplier','affilate program','collaboration opportunities','sponsorShip requests'];
+const PaymentOptions = ['Credit & Debit Cards','PayPal','Bank Transfers','Installment Plans','Gift Cards'];
+const Rewards = ['Reward Points','Referral Program','VIP Membership','Exclusive Offers','Redeem Rewards'];
+const Trade_insurances = ['What is Trade Assurance?','How It Works','Buyer Protection','Seller Guarantee','FAQs'];
+const SellOn_Flowbite = ['Seller Registration','How to Sell','Seller Policies','Seller Resources','Seller Support'];
+const Get_Support = ['Contact Us','Help Center','Community Forums','Technical Support','Live Chat'  ];
+
+
 export default  function Footer() {
   return (
     <div>
@@ -8,194 +20,86 @@ export default  function Footer() {
         <div class="grid min-w-0 flex-1 grid-cols-2 gap-6 md:gap-8 xl:grid-cols-3">
           <div>
             <h6 class="mb-4 text-sm font-semibold uppercase text-gray-900 dark:text-white">Company</h6>
-            <ul class="space-y-3">
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"> About </a>
-              </li>
-
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"> Premium </a>
-              </li>
-
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"> Blog </a>
-              </li>
-
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"> Affiliate Program </a>
-              </li>
-
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"> Get Coupon </a>
-              </li>
+            <ul className="space-y-3 flex-col flex">
+             {Company.map((item)=>(
+              <LinksCom link={item}/>
+             ))}
+              
             </ul>
           </div>
 
           <div>
             <h6 class="mb-4 text-sm font-semibold uppercase text-gray-900 dark:text-white">Order & Purchases</h6>
             <ul class="space-y-3">
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Order Status</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Track Your Order</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Purchase History</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Returns & Refunds</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Payment Methods</a>
-              </li>
+                        {Order_Purchases.map((item)=>(
+                          <LinksCom link={item}/>
+                        ))}
+             
             </ul>
           </div>
 
           <div>
             <h6 class="mb-4 text-sm font-semibold uppercase text-gray-900 dark:text-white">Support & Services</h6>
             <ul class="space-y-3">
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Contact Support</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">FAQs</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Service Centers</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Warranty Information</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Product Manuals</a>
-              </li>
+            {Support_Services.map((item)=>(
+              <LinksCom link={item}/>
+            ))}
             </ul>
           </div>
 
           <div>
             <h6 class="mb-4 text-sm font-semibold uppercase text-gray-900 dark:text-white">Partnerships</h6>
             <ul class="space-y-3">
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Partner With Us</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Become a Supplier</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Affiliate Program</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Collaboration Opportunities</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Sponsorship Requests</a>
-              </li>
+             {Partnerships.map((item)=>(
+              <LinksCom link={item}/>
+             ))}
             </ul>
           </div>
 
           <div>
             <h6 class="mb-4 text-sm font-semibold uppercase text-gray-900 dark:text-white">Payment Options</h6>
             <ul class="space-y-3">
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Credit & Debit Cards</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">PayPal</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Bank Transfers</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Installment Plans</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Gift Cards</a>
-              </li>
+              {PaymentOptions.map((item)=>(
+                <LinksCom link={item}/>
+              ))}
             </ul>
           </div>
 
           <div>
             <h6 class="mb-4 text-sm font-semibold uppercase text-gray-900 dark:text-white">Rewards</h6>
             <ul class="space-y-3">
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Reward Points</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Referral Program</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">VIP Membership</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Exclusive Offers</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Redeem Rewards</a>
-              </li>
+             {Rewards.map((item)=>(
+              <LinksCom link={item}/>
+             ))}
+              
             </ul>
           </div>
 
           <div>
             <h6 class="mb-4 text-sm font-semibold uppercase text-gray-900 dark:text-white">Trade Assurance</h6>
             <ul class="space-y-3">
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">What is Trade Assurance?</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">How It Works</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Buyer Protection</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Seller Guarantee</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">FAQs</a>
-              </li>
+             {Trade_insurances.map((item)=>(
+              <LinksCom link={item}/>
+             ))}
             </ul>
           </div>
 
           <div>
             <h6 class="mb-4 text-sm font-semibold uppercase text-gray-900 dark:text-white">Sell on Flowbite</h6>
             <ul class="space-y-3">
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Seller Registration</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">How to Sell</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Seller Policies</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Seller Resources</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Seller Support</a>
-              </li>
+             {SellOn_Flowbite.map((item)=>(
+              <LinksCom link={item}/>
+             ))}
             </ul>
           </div>
 
           <div>
             <h6 class="mb-4 text-sm font-semibold uppercase text-gray-900 dark:text-white">Get Support</h6>
             <ul class="space-y-3">
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Contact Us</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Help Center</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Community Forums</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Technical Support</a>
-              </li>
-              <li>
-                <a href="#" title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Live Chat</a>
-              </li>
+             {Get_Support.map((item)=>(
+              <LinksCom link={item}/>
+             ))}
+             
             </ul>
           </div>
         </div>
@@ -319,5 +223,14 @@ export default  function Footer() {
   </div>
 </footer>
     </div>
+  )
+}
+
+
+function LinksCom({link,route}){
+  return(
+ <li>
+                <a href={route} title="" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">{link}</a>
+              </li>
   )
 }
